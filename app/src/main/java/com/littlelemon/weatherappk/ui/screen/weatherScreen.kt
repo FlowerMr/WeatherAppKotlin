@@ -12,6 +12,7 @@ import androidx.compose.ui.unit.dp
 import com.littlelemon.weatherappk.ui.screen.components.ActionBar
 import com.littlelemon.weatherappk.ui.screen.components.AirQuality
 import com.littlelemon.weatherappk.ui.screen.components.DailyForcast
+import com.littlelemon.weatherappk.ui.screen.components.WeeklyForecast
 import com.littlelemon.weatherappk.ui.theme.ColorBackground
 
 @Composable
@@ -32,6 +33,8 @@ fun WeatherScreen(){
             DailyForcast()
             Spacer(modifier=Modifier.height(16.dp))
             AirQuality()
+            Spacer(modifier=Modifier.height(24.dp))
+            WeeklyForecast()
         }
 
     }

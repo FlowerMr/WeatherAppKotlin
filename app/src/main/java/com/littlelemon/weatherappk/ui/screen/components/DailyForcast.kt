@@ -42,7 +42,8 @@ fun DailyForcast(modifier: Modifier=Modifier,
                  ){
     ConstraintLayout(modifier=modifier.fillMaxWidth())
     {
-     val (forcastImage,forcastvalue,windImage,title,description,background)=createRefs()
+        val (forecastImage, forecastValue, windImage, title, description, background) = createRefs()
+
         CardBackground(
             modifier = Modifier.constrainAs(background) {
                 linkTo(
@@ -63,7 +64,7 @@ fun DailyForcast(modifier: Modifier=Modifier,
             ,
             modifier = Modifier
                 .height(175.dp)
-                .constrainAs(forcastImage)
+                .constrainAs(forecastImage)
                 {
                     start.linkTo(anchor = parent.start, margin = 4.dp)
                     top.linkTo(anchor = parent.top,)
@@ -72,7 +73,7 @@ fun DailyForcast(modifier: Modifier=Modifier,
                 style = MaterialTheme.typography.titleLarge,color= ColorTextSecondary, fontWeight = FontWeight.Medium,
                 modifier = Modifier.constrainAs(title){
                     start.linkTo(anchor = parent.start, margin = 24.dp)
-                    top.linkTo(anchor = forcastImage.bottom)
+                    top.linkTo(anchor = forecastImage.bottom)
 
                 }
                 )
@@ -88,11 +89,11 @@ fun DailyForcast(modifier: Modifier=Modifier,
                 .padding(bottom = 24.dp)
         )
         ForecastValue(
-            modifier=Modifier.constrainAs(forcastvalue)
+            modifier=Modifier.constrainAs(forecastValue)
             {
                     end.linkTo(anchor = parent.end, margin = 24.dp)
-                    top.linkTo(anchor = forcastImage.top)
-                    bottom.linkTo(anchor = forcastImage.bottom)
+                    top.linkTo(anchor = forecastImage.top)
+                    bottom.linkTo(anchor = forecastImage.bottom)
             }
         )
 
